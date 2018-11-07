@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
 export class QuestionsData {
     data = {
         questions: [],
-        answers: []
+        answers: [],
+        checkboxData: []
     };
 
     constructor() {
@@ -14,7 +15,8 @@ export class QuestionsData {
 
         this.data = {
             questions: [],
-            answers: []
+            answers: [],
+            checkboxData: []
         };
 
         sessionStorage.clear();

@@ -30,7 +30,7 @@ export class QuestionsComponent implements OnInit {
     checkboxValue: any[] = [];
 
     ngOnInit() {
-        // get data from question.json
+        // Fetch data from question.json
         this.http.get(`http://localhost:4200/assets/question.json`)
         .subscribe((data) => {
             this.data = data.json();
@@ -40,7 +40,7 @@ export class QuestionsComponent implements OnInit {
         });
     }
 
-    // function for next button
+    // Function for next button - to go to next page
     next() {
         this.currentPage = this.currentPage + 1;
         this.questionsData.setData('answersList', this.answer);
@@ -50,11 +50,12 @@ export class QuestionsComponent implements OnInit {
         }
     }
 
-    // function for previous button
+    // Function for previous button - to go to previous page
     previous() {
         this.currentPage = this.currentPage - 1;
     }
 
+    // Function to take up the data which values generated from checked checkbox
     selectCheckbox (e, option) {
         if (e.target.checked) {
           this.checkboxValue.push(option);

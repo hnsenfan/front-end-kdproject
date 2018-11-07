@@ -23,12 +23,15 @@ export class ResultComponent implements OnInit {
     checkboxData: any;
 
     ngOnInit() {
+
+        // Fetch data from questions.data.ts service and store
         this.answersData = this.questionsData.getData('answersList');
         this.questionData = this.questionsData.getData('questionsList');
         this.checkboxData = this.questionsData.getData('checkboxList');
     }
 
     startOver() {
+        // Navigate to home to start over the question-answer process
         this.router.navigate(['app-home']);
     }
 
