@@ -14,7 +14,6 @@
                 <div *ngFor="let option of data.option; let j = index">
                     <input type='radio' id=radio{{j}} name=answer{{i}} [(ngModel)]='answer[i]' value={{option}}>
                     <label for='radio{{j}}'>{{option}}</label><br/>
-                    
                 </div>
             </div>
             <div [hidden]="data.question_type !== 'CheckboxQuestion'">
